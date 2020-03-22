@@ -10,16 +10,29 @@ class Login_Model extends CI_Model
 		$this->db->where('userPassword', $userPassword);
 		$this->db->where('userIsActive', 1);
 		$query = $this->db->get('usermaster');
+		// $query1 = $this->db->query("select * from usermaster");
 
-		// $query = $this->db->query("select * from usermaster");
+
+
 		if ($query->num_rows() > 0) {
-		//	echo "if";
+
+			foreach ($query->result() as $row) {
+				$session_data = array(
+					'userID' => $row->userID,
+					'userName' => $row->userName,
+					'userEmail' => $row->userEmail,
+				);
+				$this->session->set_userdata($session_data);
+
+				// echo $row->userID;
+				// echo $row->userName;
+				// echo $row->userEmail;
+			}
+
 			return true;
 		} else {
-		//	echo "else";
 			return false;
 		}
-		// return $query->result();
 	}
 
 	public function getDataByID($userID)

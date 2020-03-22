@@ -62,10 +62,10 @@
 				<ul class="nav ace-nav">
 					<li class="light-blue dropdown-modal">
 						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							<img class="nav-user-photo" src="http://localhost/mu/ci/images/userImg/noImg.png" alt="Users Image" />
+							<img class="nav-user-photo" src="<?php echo base_url(); ?>/images/userImg/noImg.png" alt="Users Image" />
 							<span class="user-info">
 								<small>Welcome,</small>
-								<?=$_SESSION['userEmail'];?>
+								<?=$_SESSION['userName'];?>
 							</span>
 
 							<i class="ace-icon fa fa-caret-down"></i>
