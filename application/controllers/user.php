@@ -37,7 +37,7 @@ class user extends CI_Controller
 			'userMobileNo' => $this->input->post('txtUserMobNo'),
 			'userIsActive' => $userIsActive,
 			'userRole' => "Admin",
-			//'userRole' =>$this->input->post('ddlUserRole'),
+			'userRole' =>$this->input->post('ddlUserRole'),
 			'userImageName' => "noImg.png",
 
 		);
@@ -88,7 +88,7 @@ class user extends CI_Controller
 			'userEmail' => $this->input->post('txtUserEmail'),
 			'userMobileNo' => $this->input->post('txtUserMobNo'),
 			'userIsActive' => $userIsActive,
-			// 'userRole' =>$this->input->post('ddlUserRole'),
+			'userRole' =>$this->input->post('ddlUserRole'),
 
 		);
 		$this->db->where('userID', $userID);

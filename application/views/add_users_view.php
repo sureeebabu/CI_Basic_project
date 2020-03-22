@@ -94,21 +94,21 @@ include('header.php');
 											</div>
 										</div>
 										&nbsp;
-										<!-- <div class="form-group">
-			<label class="col-sm-3 control-label no-padding-right" for="form-field-1">User Role</label>
-				<div class="col-sm-9"> 
-	<select name='ddlUserRole' class="form-group" required="required" style="width: 250px;"  >
-		<option value="	" >-- Select User Role --</option>
-		<option value='Admin' <?php if ($mode == "Edit") {
-									if ($r->userRole == 'Admin') echo 'selected = "selected"';
-								} ?>>Admin</option>
-		<option value='User' <?php if ($mode == "Edit") {
-									if ($r->userRole == 'User') echo 'selected = "selected"';
-								} ?>>User</option>
-	</select>
-				</div>
-			</div>
-			&nbsp; -->
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-1">User Role</label>
+											<div class="col-sm-9">
+												<select name='ddlUserRole' class="form-group" required="required" style="width: 250px;">
+													<option value="	">-- Select User Role --</option>
+													<option value='Admin' <?php if ($mode == "Edit") {
+																				if ($r->userRole == 'Admin') echo 'selected = "selected"';
+																			} ?>>Admin</option>
+													<option value='User' <?php if ($mode == "Edit") {
+																				if ($r->userRole == 'User') echo 'selected = "selected"';
+																			} ?>>User</option>
+												</select>
+											</div>
+										</div>
+										&nbsp;
 										<div class="form-group">
 											<div class="col-sm-12">
 												<input type="submit" name="btnAddEditUser" class="btn btn-primary pull-right">
